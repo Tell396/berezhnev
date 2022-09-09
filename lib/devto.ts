@@ -1,18 +1,19 @@
 import axios, { AxiosResponse } from 'axios'
 import moment from 'moment'
+
 import IArticle from '../interfaces/IArticle'
 import ICachedArticle from '../interfaces/ICachedArticle'
 import IHomePageArticles from '../interfaces/IHomePageArticles'
+
 import { convertMarkdownToHtml, sanitizeDevToMarkdown } from './markdown'
 
-const username = 'jameswallis'
-const blogURL = 'https://wallis.dev/blog/'
-const portfolioURL = 'https://wallis.dev/portfolio/'
+const username = 'tell396'
+const blogURL = 'https://dev.to/tell396/'
+const portfolioURL = 'https://dev.to/tell396/'
 
-const featuredBlogSlug = 'i-completely-rewrote-my-personal-website-using-dev-to-as-a-cms-2pje'
+const featuredBlogSlug = 'test2-3p1k'
 const featuredPortfolioSlugs = [
-    'ameira-me-5a55',
-    'wallis-family-mediation-previously-wallis-consultancy-2okf',
+    'test2-3p1k',
 ]
 
 // Takes a URL and returns the relative slug to your website
@@ -53,8 +54,11 @@ const convertDevtoResponseToArticle = (data: any): IArticle => {
 
 const blogFilter = (article: IArticle): boolean => article.canonical.startsWith(blogURL)
 
-const portfolioFilter = (article: IArticle): boolean => article.canonical.startsWith(portfolioURL)
-
+const portfolioFilter = (article: IArticle): boolean => {
+		console.log(article.canonical.startsWith(portfolioURL))
+		return article.canonical.startsWith(portfolioURL)
+}
+		
 // Get all users articles from Dev.to and filter by ones with a canonical URL to your blog
 export const getAllArticles = async (): Promise<IArticle[]> => {
     const params = { username, per_page: 1000 }
@@ -69,6 +73,7 @@ export const getAllArticles = async (): Promise<IArticle[]> => {
 
 export const getAllBlogArticles = async (): Promise<IArticle[]> => {
     const articles = await getAllArticles()
+		//console.log(articles.filter(blogFilter))
     return articles.filter(blogFilter)
 }
 
