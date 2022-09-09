@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { DefaultSeo } from 'next-seo'
 import { useEffect } from 'react'
 import { AnimatePresence } from 'framer-motion'
+
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
@@ -22,7 +23,7 @@ export function reportWebVitals({ id, name, label, value }: NextWebVitalsMetric)
 }
 
 function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
-    const url = `https://wallis.dev${router.route}`
+    const url = `https://berezhnev.vercel.app${router.route}`
 
     useEffect(() => {
         // On page load or when changing themes, best to add inline in `head` to avoid FOUC
@@ -43,13 +44,13 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
                 <link rel="icon" href="/favicon.png" type="image/png" />
             </Head>
             <DefaultSeo
-                titleTemplate="%s - James Wallis"
+                titleTemplate="%s - Vladimir Berezhnev"
                 openGraph={{
                     type: 'website',
                     locale: 'en_IE',
                     url,
-                    description: 'The personal website for James Wallis, developer.',
-                    site_name: 'James Wallis | wallis.dev',
+                    description: 'The personal website for Vladimir Berezhnev, developer.',
+                    site_name: 'Vladimir Berezhnev | berezhnev.vercel.app',
                     images: [],
                 }}
                 canonical={url}
