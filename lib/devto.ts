@@ -13,7 +13,7 @@ const portfolioURL = 'https://dev.to/tell396/'
 
 const featuredBlogSlug = 'test2-3p1k'
 const featuredPortfolioSlugs = [
-    'test2-3p1k',
+    'kinoway-2phc',
 ]
 
 // Takes a URL and returns the relative slug to your website
@@ -52,11 +52,26 @@ const convertDevtoResponseToArticle = (data: any): IArticle => {
     return article
 }
 
-const blogFilter = (article: IArticle): boolean => article.canonical.startsWith(blogURL)
+const blogFilter = (article: IArticle): boolean => {
+		const isArticle = article.tags.indexOf("showdev")
+
+		if (isArticle == -1) {
+				return true
+		} else {
+				return false
+		}		
+
+		//article.canonical.startsWith(blogURL)
+}
 
 const portfolioFilter = (article: IArticle): boolean => {
-		console.log(article.canonical.startsWith(portfolioURL))
-		return article.canonical.startsWith(portfolioURL)
+		const isPortfolio = article.tags.indexOf("showdev")
+
+		if (isPortfolio == 0) {
+				return true
+		} else {
+				return false
+		}		
 }
 		
 // Get all users articles from Dev.to and filter by ones with a canonical URL to your blog

@@ -39,7 +39,8 @@ const IndexPage = ({
           tutorials to educate and help others use various technologies for the first time or in a
           more efficient manner.
         </p>
-      </Section>
+			</Section>
+
       <Section>
         <h2 className="text-3xl md:text-4xl mb-4 text-black dark:text-white">Latest article</h2>
         <ArticleCard
