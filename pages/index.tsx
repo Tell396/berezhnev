@@ -78,7 +78,6 @@ const IndexPage = ({
 
 export const getStaticProps: GetStaticProps = async () => {
   const homePageArticles = await getHomePageArticles()
-  console.log(homePageArticles)
   return { props: { homePageArticles } }
 }
 
