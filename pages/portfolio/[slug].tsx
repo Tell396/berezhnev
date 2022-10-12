@@ -1,11 +1,14 @@
-import fs from 'fs'
 import { GetStaticPaths, GetStaticProps } from 'next'
+import fs from 'fs'
 import path from 'path'
 import { ParsedUrlQuery } from 'querystring'
+
+// Components
 import DevToCallToAction from '../../components/DevToCallToAction'
 import Layout from '../../components/Layout'
 import PageTitle from '../../components/PageTitle'
 import IArticle from '../../interfaces/IArticle'
+
 import { getAllPortfolioArticles, getArticleFromCache } from '../../lib/devto'
 
 const cacheFile = '.dev-to-cache-portfolio.json'
