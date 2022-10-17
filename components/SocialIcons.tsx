@@ -1,4 +1,4 @@
-import { FaDev, FaGithub, FaLinkedinIn } from 'react-icons/fa'
+import { FaDev, FaGithub, FaLinkedinIn, FaTelegram } from 'react-icons/fa'
 
 const links = [
     {
@@ -9,6 +9,10 @@ const links = [
         Icon: FaGithub,
         href: 'https://github.com/Tell396',
     },
+		{
+				Icon: FaTelegram,
+				href: 'https:/t.me/VladimirBerezhnev'
+		},
     {
         Icon: FaLinkedinIn,
         href: 'https://www.linkedin.com/in/vladimir-berezhnev-53980020b',
