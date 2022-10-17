@@ -28,5 +28,6 @@ export const convertMarkdownToHtml = (markdown: string): string => {
         .use(remarkHtml)
         .processSync(stripHtmlComments(content)).contents
 
+		console.log(html)
     return String(html)
 }

@@ -34,11 +34,8 @@ const ArticlePage = ({ article, publishedDate }: IProps): JSX.Element => (
         <p className="text-center w-full my-4 italic leading-relaxed text-gray-600">
             {publishedDate}
         </p>
-        <section className="mt-6 font-light leading-relaxed w-full flex flex-col items-center">
-            <article
-    className="prose dark:prose-dark lg:prose-lg w-full md:w-5/6 xl:w-9/12 dark:text-white"
-                dangerouslySetInnerHTML={{ __html: article.html }}
-            />
+        <section className="mt-6 font-light leading-relaxed w-full flex flex-col items-center paragraph">
+            <article className="prose dark:prose-dark lg:prose-lg w-full md:w-5/6 xl:w-9/12 dark:text-white" dangerouslySetInnerHTML={{ __html: article.html }} />
             <DevToCallToAction href={article.devToURL} />
         </section>
     </Layout>

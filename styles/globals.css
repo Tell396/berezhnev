@@ -38,3 +38,8 @@
         }
     }
 }
+
+.paragraph {
+		  line-height: 32px;   /* within paragraph */
+  margin-bottom: 30px; /* between paragraphs */
+}
