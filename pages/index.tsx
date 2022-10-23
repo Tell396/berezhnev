@@ -29,7 +29,7 @@ const IndexPage = ({
       <Section linebreak>
         <h2 className="text-3xl md:text-4xl mb-4 text-black dark:text-white">About</h2>
         <p className="my-2">
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus placeat ratione possimus, maxime temporibus dolores eveniet ea sed voluptates numquam harum in velit culpa tempore corporis. Dolorum nisi iure neque?
+        Enthusiast. I like to learn new things for myself. At the moment I'm learning Golang and Rust.
 				</p>
 			</Section>
 
